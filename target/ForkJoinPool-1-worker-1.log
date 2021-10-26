@@ -1,0 +1,113 @@
+11:48:17.995 karate.env system property was:  
+11:48:18.549 request:
+1 > GET https://petstore.swagger.io/v2/store/inventory
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Host: petstore.swagger.io
+1 > User-Agent: Apache-HttpClient/4.5.12 (Java/1.8.0_281)
+
+11:48:19.367 response time in milliseconds: 819,20
+1 < 200
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Origin: *
+1 < Connection: keep-alive
+1 < Content-Type: application/json
+1 < Date: Tue, 26 Oct 2021 08:48:19 GMT
+1 < Server: Jetty(9.2.9.v20150224)
+1 < Transfer-Encoding: chunked
+{"teste":2,"string":17,"alive":18,"unavailable":2,"ITALIA ROMA":1,"pending":62,"available":701,"Not Available":2,"admision":4,"CLOSE":1,"Sold":2,"not available":1,"Available":4,"passed":2,"ok":5,"ROMA+ROMA":1,"free":1,"OK":1,"sold":64,"a":1,"TestListPetTestStatusCloudNew":1,"tester+qa":1,"avalible":1,"4ill":12,"Disponible":2,"1":12,"ready123":2,"availabel":1,"ROMA":1,"dragonite":1,"Good":1,"Pending":5,"status":1}
+
+11:48:19.367 karate.env system property was:  
+11:48:19.382 request:
+1 > GET https://petstore.swagger.io/v2/pet/findByStatus%3Fstatus?status=available
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Host: petstore.swagger.io
+1 > User-Agent: Apache-HttpClient/4.5.12 (Java/1.8.0_281)
+
+11:48:19.937 response time in milliseconds: 559,18
+1 < 404
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Origin: *
+1 < Connection: keep-alive
+1 < Content-Type: application/json
+1 < Date: Tue, 26 Oct 2021 08:48:20 GMT
+1 < Server: Jetty(9.2.9.v20150224)
+1 < Transfer-Encoding: chunked
+{"code":404,"type":"unknown","message":"java.lang.NumberFormatException: For input string: \"findByStatus?status\""}
+
+11:48:19.937 [print] {
+  "code": 404,
+  "type": "unknown",
+  "message": "java.lang.NumberFormatException: For input string: \"findByStatus?status\""
+}
+
+11:48:19.937 karate.env system property was:  
+11:48:19.953 request:
+1 > GET https://petstore.swagger.io/v2/pet
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Host: petstore.swagger.io
+1 > User-Agent: Apache-HttpClient/4.5.12 (Java/1.8.0_281)
+
+11:48:20.523 response time in milliseconds: 572,13
+1 < 405
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Origin: *
+1 < Connection: keep-alive
+1 < Content-Length: 102
+1 < Content-Type: application/xml
+1 < Date: Tue, 26 Oct 2021 08:48:20 GMT
+1 < Server: Jetty(9.2.9.v20150224)
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?><apiResponse><type>unknown</type></apiResponse>
+
+11:48:20.523 karate.env system property was:  
+11:48:20.538 request:
+1 > POST https://petstore.swagger.io/v2/pet
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Content-Length: 11
+1 > Content-Type: text/plain; charset=UTF-8
+1 > Host: petstore.swagger.io
+1 > user-agent: Testinium
+requestBody
+
+11:48:21.055 response time in milliseconds: 525,61
+1 < 415
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Origin: *
+1 < Connection: keep-alive
+1 < Content-Length: 102
+1 < Content-Type: application/xml
+1 < Date: Tue, 26 Oct 2021 08:48:21 GMT
+1 < Server: Jetty(9.2.9.v20150224)
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?><apiResponse><type>unknown</type></apiResponse>
+
+11:48:21.070 karate.env system property was:  
+11:48:21.070 request:
+1 > GET https://petstore.swagger.io/v2/store/inventory
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Host: petstore.swagger.io
+1 > User-Agent: Apache-HttpClient/4.5.12 (Java/1.8.0_281)
+
+11:48:21.856 response time in milliseconds: 782,55
+1 < 200
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Origin: *
+1 < Connection: keep-alive
+1 < Content-Type: application/json
+1 < Date: Tue, 26 Oct 2021 08:48:22 GMT
+1 < Server: Jetty(9.2.9.v20150224)
+1 < Transfer-Encoding: chunked
+{"sold":15,"1":3,"string":199,"alive":1,"noexiste":1,"Busy":1,"special-dog":1,"pending":32,"Grep":1,"available":644,"ok":5,"OK":1}
+
+903 assertion failed: path: $.alive, actual: 1, expected: 18, reason: not equal (Integer)
+:1,"sold":64,"a":1,"TestListPetTestStatusCloudNew":1,"tester+qa":1,"avalible":1,"4ill":12,"Disponible":2,"1":12,"ready123":2,"availabel":1,"ROMA":1,"dragonite":1,"Good":1,"Pending":5,"status":1}
+
+11:47:35.743 assertion failed: path: $.alive, actual: 18, expected: 1, reason: not equal (Integer)

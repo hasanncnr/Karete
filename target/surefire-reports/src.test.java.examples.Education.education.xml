@@ -1,0 +1,81 @@
+<testsuite failures="0" name="src/test/java/examples/Education/education.feature" skipped="0" tests="5" time="3.766694">
+  <testcase classname="src.test.java.examples.Education.education" name="Get request" time="1.299721">
+    <system-out>* url 'https://petstore.swagger.io/v2/' ................................... passed
+And path 'store/inventory' ................................................ passed
+When method Get ........................................................... passed</system-out>
+  </testcase>
+  <testcase classname="src.test.java.examples.Education.education" name="Add Queryparameter" time="0.564851">
+    <system-out>* url 'https://petstore.swagger.io/v2/' ................................... passed
+And path 'store/inventory' ................................................ passed
+When method Get ........................................................... passed
+* url 'https://petstore.swagger.io/v2/' ................................... passed
+And path '/pet/findByStatus?status' ....................................... passed
+And param status = 'available' ............................................ passed
+When method Get ........................................................... passed
+And print response ........................................................ passed</system-out>
+  </testcase>
+  <testcase classname="src.test.java.examples.Education.education" name="Def operation" time="0.577849">
+    <system-out>* url 'https://petstore.swagger.io/v2/' ................................... passed
+And path 'store/inventory' ................................................ passed
+When method Get ........................................................... passed
+* url 'https://petstore.swagger.io/v2/' ................................... passed
+And path '/pet/findByStatus?status' ....................................... passed
+And param status = 'available' ............................................ passed
+When method Get ........................................................... passed
+And print response ........................................................ passed
+* url 'https://petstore.swagger.io/v2/' ................................... passed
+* def requestBody = ....................................................... passed
+And path '/pet' ........................................................... passed
+And request 'requestBody' ................................................. passed
+When method Get ........................................................... passed</system-out>
+  </testcase>
+  <testcase classname="src.test.java.examples.Education.education" name="Add Header and status control" time="0.531943">
+    <system-out>* url 'https://petstore.swagger.io/v2/' ................................... passed
+And path 'store/inventory' ................................................ passed
+When method Get ........................................................... passed
+* url 'https://petstore.swagger.io/v2/' ................................... passed
+And path '/pet/findByStatus?status' ....................................... passed
+And param status = 'available' ............................................ passed
+When method Get ........................................................... passed
+And print response ........................................................ passed
+* url 'https://petstore.swagger.io/v2/' ................................... passed
+* def requestBody = ....................................................... passed
+And path '/pet' ........................................................... passed
+And request 'requestBody' ................................................. passed
+When method Get ........................................................... passed
+* url 'https://petstore.swagger.io/v2/' ................................... passed
+* def requestBody = ....................................................... passed
+And path '/pet' ........................................................... passed
+And request 'requestBody' ................................................. passed
+And header user-agent = 'Testinium' ....................................... passed
+When method Post .......................................................... passed
+Then status 415 ........................................................... passed</system-out>
+  </testcase>
+  <testcase classname="src.test.java.examples.Education.education" name="Response match" time="0.792331">
+    <system-out>* url 'https://petstore.swagger.io/v2/' ................................... passed
+And path 'store/inventory' ................................................ passed
+When method Get ........................................................... passed
+* url 'https://petstore.swagger.io/v2/' ................................... passed
+And path '/pet/findByStatus?status' ....................................... passed
+And param status = 'available' ............................................ passed
+When method Get ........................................................... passed
+And print response ........................................................ passed
+* url 'https://petstore.swagger.io/v2/' ................................... passed
+* def requestBody = ....................................................... passed
+And path '/pet' ........................................................... passed
+And request 'requestBody' ................................................. passed
+When method Get ........................................................... passed
+* url 'https://petstore.swagger.io/v2/' ................................... passed
+* def requestBody = ....................................................... passed
+And path '/pet' ........................................................... passed
+And request 'requestBody' ................................................. passed
+And header user-agent = 'Testinium' ....................................... passed
+When method Post .......................................................... passed
+Then status 415 ........................................................... passed
+* url 'https://petstore.swagger.io/v2/' ................................... passed
+And path '/store/inventory' ............................................... passed
+When method Get ........................................................... passed
+Then status 200 ........................................................... passed
+Then match $.alive == 1 ................................................... passed</system-out>
+  </testcase>
+</testsuite>
